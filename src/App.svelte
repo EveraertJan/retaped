@@ -25,7 +25,7 @@
       float: left;
       display: flex;
       background-color: #aaa;
-      background: url("./images/cover.jpeg") center center no-repeat;
+      background: url("https://images.unsplash.com/photo-1550000472-ed8dbdc1a1b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2125&q=80") center center no-repeat;
       background-size: cover;
       justify-content: left;
       align-items:flex-end;
