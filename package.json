@@ -1,5 +1,5 @@
 {
-  "name": "svelte-app",
+  "name": "retaped",
   "private": true,
   "scripts": {
     "build": "rollup -c",

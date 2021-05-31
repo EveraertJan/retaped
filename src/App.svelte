@@ -1,48 +1,86 @@
-<script>
-  import { onMount } from "svelte";
-  export let date;
 
-  onMount(async () => {
-    const res = await fetch("/api/date");
-    const newDate = await res.text();
-    date = newDate;
-  });
-</script>
 
-<main>
-  <h1>Svelte + Node.js API</h1>
-  <h2>
-    Deployed with
-    <a href="https://vercel.com/docs" target="_blank" rel="noreferrer noopener">
-      Vercel
-    </a>
-    !
-  </h2>
-  <p>
-    <a
-      href="https://github.com/vercel/vercel/tree/main/examples/svelte"
-      target="_blank"
-      rel="noreferrer noopener">
-      This project
-    </a>
-    is a
-    <a href="https://svelte.dev/">Svelte</a>
-    app with three directories,
-    <code>/public</code>
-    for static assets,
-    <code>/src</code>
-    for components and content, and
-    <code>/api</code>
-    which contains a serverless
-    <a href="https://nodejs.org/en/">Node.js</a>
-    function. See
-    <a href="/api/date">
-      <code>api/date</code>
-      for the Date API with Node.js
-    </a>
-    .
-  </p>
-  <br />
-  <h2>The date according to Node.js is:</h2>
-  <p>{date ? date : 'Loading date...'}</p>
-</main>
+    <main>
+      <div id="cover">
+        <div class="props">Photo by <a href="https://unsplash.com/@lepipotron?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pierre Herman</a> on <a href="https://unsplash.com/s/photos/police?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+      </div>
+      <div id="container">
+        <div id="notice">
+          <div id="header">
+            <h1>RETAPED</h1>  
+            
+            <!-- <a class="CTA contact" href="mailto:info@retaped.be">Contact us</a> -->
+          </div>
+        </div>
+      </div>
+      
+    </main>
+
+
+    <style>
+    #cover {
+      margin: 0px;
+      width: 40vw;
+      height: 100%;
+      float: left;
+      display: flex;
+      background-color: #aaa;
+      background: url("./images/cover.jpeg") center center no-repeat;
+      background-size: cover;
+      justify-content: left;
+      align-items:flex-end;
+    }
+    .props {
+      font-size: 0.8em;
+      color:#aaa;
+      height: 30px;
+      line-height: 30px;
+      padding: 0px 20px;
+      border-radius: 15px;
+      box-sizing: border-box;
+      margin: 20px;
+    }
+    .props > a {
+      color: #aaa;
+    }
+    #notice {
+      display: flex;
+      width: 60%;
+      height: 100%;
+      display:flex;
+      align-items:center;
+    }
+    #header {
+      height: 200px;
+      width: 300px;
+      margin-left: 100px;
+      display: block;
+    }
+    #header > h1 {
+      font-size: 5em;
+      font-family: 'Roboto', sans-serif;
+      display: block;
+      width: 100%;
+    }
+    #header > p {
+      display: block;
+      color: #aaa;
+      margin-bottom: 50px;
+      font-size: .9em;
+      text-align: justify;
+      line-height: 1.5em;
+    }
+    
+    
+    .CTA {
+      margin-top: 40px;
+      height: 40px;
+      line-height: 40px;
+      padding: 5px 20px;
+      border-radius: 15px;
+      box-sizing: border-box;
+      border: 1px solid #aaa;
+      color: #aaa;
+      text-decoration: none;
+    }
+  </style>
